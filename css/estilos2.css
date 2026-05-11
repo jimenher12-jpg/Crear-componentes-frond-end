@@ -1,0 +1,12 @@
+.text-wrap{
+    color: mediumvioletred;
+}
+.text-nowrap{
+    color: brown;
+}
+.text-break{
+    color: green;
+}
+.fila1 td, .fila1th{
+    background-color: burlywood;
+}
