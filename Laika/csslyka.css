@@ -55,7 +55,7 @@ nav > ul> li{
     position: relative;/*respeta el espacio cuando yo lo muevo*/
     padding: 15px 20px;
     color:black;
-    cursor:pointer; /*parra que se vea la maito del mouse*/
+    cursor:pointer; /*para que se vea la maito del mouse*/
 
 }
 nav >ul>li:hover{
