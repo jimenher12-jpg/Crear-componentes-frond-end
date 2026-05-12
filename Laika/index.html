@@ -19,38 +19,55 @@
 
 <body>
     <header>
-        <div id="info-encabezado">
-            <div>
+        <div id="info-encabezado" class="container-fluid">
+            <div class="row align-items-center py-2">
+                
                  <i class="bi bi-telephone-fill"> Llámanos +57 300 910 8496</i>
             </div>
             <div>
-                   🛡️ Compras seguras
+                   <i class="bi bi-shield-fill"> Compras seguras online</i>
             </div>
                 
             <div>
-                💵 Pago contraentrega
+                <i class="bi bi-credit-card-fill"> Pago contraentrega</i>
             </div>
             <div>
-                🚚 Entregas el mismo día
+                <i class="bi bi-truck"> Entregas el mismo día</i>
             </div>
-            <div>
-                Siguenos en: <a href=""><img src="" alt=""></a>
+            <div class="d-flex align-items-center gap-4">
+                <span>Siguenos en:</span>
+
+                <a href="https://www.youtube.com" class="text-white"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.facebook.com" class="text-white"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com" class="text-white"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiktok.com" class="text-white"><i class="bi bi-tiktok"></i></a>
             </div>
         </div>
             
         </div>
-        <div id="info-general">
-            <a href=""><img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqnsskPT2d5Bq81cOHOlB46utTSn0pMF8DHg&s"
-                    alt="home"></a>
-            <input type="search" placeholder="Buscar" id="buscar">
-            <input type="button" value="Mi cuenta" id="ingresar">
-            <a href=""><img src="https://cdn-icons-png.flaticon.com/512/5412/5412512.png" alt=""></a>
+        <div id="info-general" class="d-flex align-items-center">
+
+            <a href="#"><img src="img/image.png" alt="home" class="logo"></a>
+
+            <div class="buscador flex-grow-1 mx-5">
+                <input type="search" placeholder="Buscar productos, marcas y mas..." id="buscar">
+                <i class="bi bi-search"></i>
+            </div>
+
+             <div class="cuenta d-flex align-items-center ms-4">
+                <li class="bi-bi-person"></li>
+                <span>Mi cuenta</span>
+            </div>
+            
+            <a href="#" class="carrito ms-4">
+                <i class="bi bi-cart3"></i>
+            </a>
         </div>
     </header>
     <!--navegación-->
-    <nav>
-        <ul>
+    <nav class="navbar-nav d-flex flex-row gap-3 ">
+        <div class="container-fluid px-4">
+            <ul>
             <li>Gato
                 <ul>
                     <li>Alimento</li>
@@ -67,6 +84,7 @@
             <li>Promociones</li>
             <li>Tienda</li>
         </ul>
+        </div>
     </nav>
     <!--banner-->
     <section id="banner">

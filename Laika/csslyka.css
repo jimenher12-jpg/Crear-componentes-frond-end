@@ -7,40 +7,64 @@
     box-sizing: border-box;
 }
 #info-encabezado{
-    background-color: #B42ADE;
+    background-color: #3D275A;
     color: aliceblue;
     display: flex;
-    justify-content: space-between; /*deje un espacio entre ellos */
+    justify-content: center; /*deje un espacio entre ellos */
     align-items: center;
     padding: 4px;
 }
 #info-general{
-    background-color: rgba(147, 42, 168, 0.637);
-    color: rgba(168, 26, 204, 0.733);
+    background-color: #6A3A8E;
+    color: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2px 2px;
-
-
+    padding: 30px 50px;
 }
-#info-general img{
-    width: 60px; 
+.logo{
+    width: 90px;
+}
+.buscador{
+    position: relative;
+    max-width: 950px;
+    width: 100%;
+
 }
 #buscar{ /*cuadro del buscador*/
-    max-width: 400px;
-    height: 45px;
-    font-size: 16px;
-    border-radius: 9px; /*entre mas grande el radio, mas es el #*/
-    border:1px solid rgb(54, 43, 43);
-}
-#ingresar{
-    width: 150px;
+    width: 100%;
     height: 50px;
-    font-size: 16px;
-    background-color:  #ce91e0;
-    color: aliceblue;
-    border:none;
+    font-size: 15px;
+    border-radius: 10px; 
+    border: none;
+    padding: 17px;
+    outline: none;
+}
+.bi-search{
+    position: absolute;
+    right: 25px;
+    top: 12px;
+    font-size: 20px;
+    color: gray;
+}
+
+/* CUENTA */
+.cuenta{
+    color: white;
+    font-size: 3rem;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.cuenta i{
+    font-size: 2.3rem;
+}
+
+/* CARRITO */
+.carrito{
+    color: white;
+    font-size: 3rem;
+    text-decoration: none;
 }
 nav ul{
     list-style: none; 
