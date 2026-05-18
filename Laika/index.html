@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milaika</title>
-    <link rel="stylesheet" href="./laika.css">
+    <link rel="stylesheet" href="laika.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--tipo de letra-->
@@ -18,93 +18,347 @@
 </head>
 
 <body>
-    <header>
-        <div class="container-fluid bg-purple text-white">
-            <div class="row align-items-center py-2 text-center text-md-start">
+    <header class="w-100">
+        <div id="info-encabezado" class="text-white py-2">
+            <div class="container">
 
-                <div class="col-md-8 d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
-                    <span><i class="bi bi-telephone-fill"></i> Llámanos +57 300 910 8496</span>
-                    <span><i class="bi bi-shield-fill"></i> Compras seguras online</span>
-                    <span><i class="bi bi-credit-card-fill"></i> Pago contraentrega</span>
-                    <span><i class="bi bi-truck"></i> Entregas el mismo día</span>
+                <div class="row align-items-center d-none d-md-flex">
+                    <div class="col-md-9 d-flex flex-wrap gap-4 justify-content-between">
+                        <span><i class="bi bi-telephone-fill me-1"></i> Llámanos +57 300 910 8496</span>
+                        <span><i class="bi bi-shield-fill me-1"></i> Compras seguras online</span>
+                        <span><i class="bi bi-credit-card-fill me-1"></i> Pago contraentrega</span>
+                        <span><i class="bi bi-truck me-1"></i> Entregas el mismo día</span>
+                    </div>
+
+                    <div class="col-md-3 d-flex align-items-center gap-4 justify-content-end">
+                        <span class="me-1">Siguenos en:</span>
+                        <a href="https://www.youtube.com" target="_blank" class="text-white"><i
+                                class="bi bi-youtube"></i></a>
+                        <a href="https://www.facebook.com" target="_blank" class="text-white"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" class="text-white"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com" target="_blank" class="text-white"><i
+                                class="bi bi-tiktok"></i></a>
+                    </div>
                 </div>
-                
-            <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center gap-3">
-                <span>Siguenos en:</span>
 
-                <a href="https://www.youtube.com" target="_blank" class="text-white">
-                    <i class="bi bi-youtube"></i>
-                </a>
-                <a href="https://www.facebook.com" target="_blank" class="text-white">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com" target="_blank" class="text-white">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com" target="_blank" class="text-white">
-                    <i class="bi bi-tiktok"></i>
-                </a>
+                <div class="d-flex d-md-none align-items-center justify-content-between">
+                    <div>
+                        <a href="#"><img src="img/image.png" alt="logo laika" class="logo-laika"></a>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-white text-decoration-none"><i class="bi bi-person fs-3"></i></a>
+                        <a href="#" class="text-white text-decoration-none"><i class="bi bi-list fs-3"></i></a>
+                        <a href="#" class="text-white text-decoration-none"><i class="bi bi-cart3 fs-3"></i></a>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-        </div>
-        <div id="info-general" class="d-flex align-items-center">
+        <div id="info-general" class="py-3">
+            <div class="container">
 
-            <a href="#"><img src="img/image.png" alt="home" class="logo"></a>
+                <div class="row align-items-center gy-3">
+                    <div class="col-6 col-md-3 d-none d-md-flex justify-content-start align-items-center">
+                        <a href="#"><img src="img/image.png" alt="logo laika" class="logo-laika"></a>
+                    </div>
 
-            <div class="buscador flex-grow-1 mx-5">
-                <input type="search" placeholder="Buscar productos, marcas y mas..." id="buscar">
-                <i class="bi bi-search"></i>
+                    <div class="col-12 col-md-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control rounded-start-3 border-0 py-3 ps-3"
+                                placeholder="Buscar productos, marcas y mas...">
+                            <span class="input-group-text bg-white border-0 rounded-end-3 pe-4">
+                                <i class="bi bi-search text-muted fs-4"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-6 col-md-3 d-none d-md-flex justify-content-end align-items-center gap-3 text-white">
+                        <a href="#" class="text-white text-decoration-none d-flex align-items-center gap-2">
+                            <i class="bi bi-person fs-4"></i>
+                            <span class="d-none d-md-inline fw-light">Mi cuenta</span>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="bi bi-cart3 fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="cuenta d-flex align-items-center ms-4">
-                <li class="bi-bi-person"></li>
-                <span>Mi cuenta</span>
-            </div>
-
-            <a href="#" class="carrito ms-4">
-                <i class="bi bi-cart3"></i>
-            </a>
         </div>
     </header>
     <!--navegación-->
-    <nav class="navbar-nav d-flex flex-row gap-3 ">
-        <div class="container-fluid px-4">
-            <ul>
-                <li>Gato
-                    <ul>
-                        <li>Alimento</li>
-                        <li>Arenas</li>
+    <nav class="navbar navbar-expand-md bg-white py-2 shadow-sm">
+        <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
+
+            <div class="d-none d-md-flex align-items-center gap-4">
+
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark fw-normal" href="#" role="button"
+                        data-bs-toggle="dropdown">
+                        Perro
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm">
+                        <li><a class="dropdown-item" href="#">Alimento</a></li>
+                        <li><a class="dropdown-item" href="#">Juguetes</a></li>
+                        <li><a class="dropdown-item" href="#">Farmapet</a></li>
+                        <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                        <li><a class="dropdown-item" href="#">Cuidado e higiene</a></li>
+                        <li><a class="dropdown-item" href="#">Snacks</a></li>
+                        <li><a class="dropdown-item" href="#">Marcas exclusivas</a></li>
+                        <li><a class="dropdown-item" href="#">imPETdibles</a></li>
                     </ul>
-                </li>
-                <li>Perro
-                    <ul>
-                        <li>Alimento</li>
-                        <li>Juguetes</li>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark fw-normal" href="#" role="button"
+                        data-bs-toggle="dropdown">
+                        Gato
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm">
+                        <li><a class="dropdown-item" href="#">Alimento</a></li>
+                        <li><a class="dropdown-item" href="#">Arenas</a></li>
+                        <li><a class="dropdown-item" href="#">Juguetes</a></li>
+                        <li><a class="dropdown-item" href="#">Farmapet</a></li>
+                        <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                        <li><a class="dropdown-item" href="#">Cuidado e higiene</a></li>
+                        <li><a class="dropdown-item" href="#">Snacks</a></li>
+                        <li><a class="dropdown-item" href="#">Marcas exclusivas</a></li>
+                        <li><a class="dropdown-item" href="#">imPETdibles</a></li>
                     </ul>
-                </li>
-                <li>Servicios</li>
-                <li>Promociones</li>
-                <li>Tienda</li>
-            </ul>
+                </div>
+
+                <a class="nav-link text-dark fw-normal" href="#">Servicios</a>
+                <a class="nav-link text-dark fw-normal" href="#">Promociones</a>
+                <a class="nav-link text-dark fw-normal" href="#">Tiendas</a>
+                <a class="nav-link text-dark fw-normal" href="#">Laika Member</a>
+            </div>
+
+            <div class="d-none d-md-block">
+                <button class="btn text-white d-flex align-items-center gap-2 px-3 py-2"
+                    style="background-color: #6A3A8E; border-radius: 8px;">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Selecciona la ciudad</span>
+                    <i class="bi bi-chevron-down ms-1 fs-6"></i>
+                </button>
+            </div>
+
         </div>
     </nav>
-    <!--banner-->
-    <section id="banner">
-        <img src="https://laika.com.co/_next/image?url=https%3A%2F%2Fstatic.laika.digital%2Fbanners%2Fdec43fb426bfb54d80fab68c9e68415c_1776350593.jpg&w=1920&q=75"
-            alt="banner">
-    </section>
-    <!--seccion mascotas-->
-    <section id="mascotas">
-        <div id="perro">
-            <img src="https://laika.com.co/_next/image?url=https%3A%2F%2Fstatic.laika.digital%2Fsettings%2Fhome%2Fperros-003.png&w=384&q=75"
-                alt="perro">
-            <p class="parrafo">Mima a tu mejor amigo forever 🎁</p>
+
+    <div id="carruselBanners" class="carousel slide container mt-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carruselBanners" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carruselBanners" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carruselBanners" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carruselBanners" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carruselBanners" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carruselBanners" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carruselBanners" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carruselBanners" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#carruselBanners" data-bs-slide-to="8" aria-label="Slide 9"></button>
+            <button type="button" data-bs-target="#carruselBanners" data-bs-slide-to="9" aria-label="Slide 10"></button>
+            <button type="button" data-bs-target="#carruselBanners" data-bs-slide-to="10"
+                aria-label="Slide 11"></button>
         </div>
-        <div id="gato">
-            <p class="parrafo">Mima a tu Dios en la tierra 🎁</p>
-            <img src="https://laika.com.co/_next/image?url=https%3A%2F%2Fstatic.laika.digital%2Fsettings%2Fhome%2Fgatos-003.png&w=384&q=75"
-                alt="gato">
+
+        <div class="carousel-inner rounded-4 shadow-sm" id="carrusel-imagenes"></div>
+
+
+    </div>
+    <!--seccion mascotas-->
+    <section id="mascotas" class="container mt-4">
+        <div class="row g-2 g-sm-3">
+
+            <div class="col-6">
+                <div id="perro"
+                    class="tarjeta-mascota d-flex align-items-center justify-content-between rounded-4 p-2 p-sm-3 shadow-sm h-100">
+                    <div class="imagen-contenedor">
+                        <img src="https://laika.com.co/_next/image?url=https%3A%2F%2Fstatic.laika.digital%2Fsettings%2Fhome%2Fperros-003.png&w=384&q=75"
+                            alt="perro" class="img-fluid align-self-end">
+                    </div>
+                    <div class="texto-contenedor ms-2">
+                        <h2 class="titulo-mascota fw-bold mb-1">Cuida a tu mejor amigo</h2>
+                        <p class="descripcion-mascota text-secondary mb-2 d-none d-md-block">Todo lo que necesita para
+                            ser feliz y saludable.</p>
+                        <a href="#" class="btn btn-morado btn-sm px-2 px-sm-3">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div id="gato"
+                    class="tarjeta-mascota d-flex align-items-center justify-content-between rounded-4 p-2 p-sm-3 shadow-sm h-100">
+                    <div class="imagen-contenedor">
+                        <img src="https://laika.com.co/_next/image?url=https%3A%2F%2Fstatic.laika.digital%2Fsettings%2Fhome%2Fgatos-003.png&w=384&q=75"
+                            alt="gato" class="img-fluid align-self-end">
+                    </div>
+                    <div class="texto-contenedor ms-2">
+                        <h2 class="titulo-mascota fw-bold mb-1">Mima a tu felino</h2>
+                        <p class="descripcion-mascota text-secondary mb-2 d-none d-md-block">Productos hechos para su
+                            comodidad y diversión.</p>
+                        <a href="#" class="btn btn-morado btn-sm px-2 px-sm-3">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="favoritos-seccion" class="container mt-5">
+        <div class="mb-4">
+            <h2 class="fw-bold mb-1">Favoritos para tu PET-AMIGO</h2>
+            <p class="text-secondary small">Descubre descuentos exclusivos, combos y precios especiales en nuestros
+                productos por tiempo limitado.</p>
+        </div>
+
+        <div id="carruselProductos" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="row flex-nowrap contenedor-scroll-movil gx-2 gy-3">
+
+                        <div class="col-9 col-md-3">
+                            <div class="card card-producto h-100 border-light shadow-sm p-3 rounded-4">
+                                <div class="contenedor-img-producto text-center bg-light rounded-3 p-2 mb-3">
+                                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&q=80"
+                                        class="img-fluid" alt="Engystol">
+                                </div>
+                                <span class="text-muted small d-block mb-1">Por Heel</span>
+                                <h5 class="card-title fw-bold fs-6 text-dark text-truncate">Heel - Engystol Tabletas
+                                </h5>
+                                <div class="mt-auto section-precios">
+                                    <div class="fw-bold text-dark fs-5 mb-0">$142.000</div>
+                                    <div class="text-muted extra-small mb-1">($14.200/gr)</div>
+                                    <div class="text-muted small mb-3">Member $132.060 👑</div>
+                                    <span
+                                        class="badge border border-purple text-purple rounded-pill px-2 py-1 small">9LB</span>
+                                    <button class="btn btn-agregar w-100 mt-3 py-2">Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-9 col-md-3">
+                            <div class="card card-producto h-100 border-light shadow-sm p-3 rounded-4">
+                                <div class="contenedor-img-producto text-center bg-light rounded-3 p-2 mb-3">
+                                    <img src="https://images.unsplash.com/photo-1608454367599-c1139e64e9a1?w=300&q=80"
+                                        class="img-fluid" alt="Arena">
+                                </div>
+                                <span class="text-muted small d-block mb-1">Por Fresh step</span>
+                                <h5 class="card-title fw-bold fs-6 text-dark text-truncate">Fresh Step - Arena Multi Cat
+                                </h5>
+                                <div class="mt-auto section-precios">
+                                    <div class="fw-bold text-dark fs-5 mb-0">$70.900</div>
+                                    <div class="text-muted extra-small mb-1">($11,15/gr)</div>
+                                    <div class="text-muted small mb-3">Member $65.228 👑</div>
+                                    <span
+                                        class="badge border border-purple text-purple rounded-pill px-2 py-1 small">9LB</span>
+                                    <button class="btn btn-agregar w-100 mt-3 py-2">Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-9 col-md-3">
+                            <div class="card card-producto h-100 border-light shadow-sm p-3 rounded-4">
+                                <div class="contenedor-img-producto text-center bg-light rounded-3 p-2 mb-3">
+                                    <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?w=300&q=80"
+                                        class="img-fluid" alt="Barf">
+                                </div>
+                                <span class="text-muted small d-block mb-1">Por Peluditos barf</span>
+                                <h5 class="card-title fw-bold fs-6 text-dark text-truncate">Peluditos Barf - Natural
+                                </h5>
+                                <div class="mt-auto section-precios">
+                                    <div class="fw-bold text-dark fs-5 mb-0">$3.600</div>
+                                    <div class="text-muted extra-small mb-1">($12/gr)</div>
+                                    <div class="text-muted small mb-3">Member $3.420 👑</div>
+                                    <div class="d-flex gap-1 overflow-hidden">
+                                        <span
+                                            class="badge border border-purple text-purple rounded-pill px-2 py-1 small">300
+                                            GR</span>
+                                        <span
+                                            class="badge border border-secondary text-secondary rounded-pill px-2 py-1 small">750
+                                            GR</span>
+                                    </div>
+                                    <button class="btn btn-agregar w-100 mt-3 py-2">Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-9 col-md-3">
+                            <div class="card card-producto h-100 border-light shadow-sm p-3 rounded-4">
+                                <div class="contenedor-img-producto text-center bg-light rounded-3 p-2 mb-3">
+                                    <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=300&q=80"
+                                        class="img-fluid" alt="Juguete">
+                                </div>
+                                <span class="text-muted small d-block mb-1">Por Paw day</span>
+                                <h5 class="card-title fw-bold fs-6 text-dark text-truncate">Paw Day - Pescado Eléctrico
+                                </h5>
+                                <div class="mt-auto section-precios">
+                                    <div class="fw-bold text-dark fs-5 mb-0">$30.300</div>
+                                    <div class="text-muted extra-small mb-1">($37,88/gr)</div>
+                                    <div class="text-muted small mb-3">Member $27.270 👑</div>
+                                    <span
+                                        class="badge border border-purple text-purple rounded-pill px-2 py-1 small">ÚNICA</span>
+                                    <button class="btn btn-agregar w-100 mt-3 py-2">Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row flex-nowrap contenedor-scroll-movil gx-2 gy-3">
+
+                        <div class="col-9 col-md-3">
+                            <div class="card card-producto h-100 border-light shadow-sm p-3 rounded-4">
+                                <div class="contenedor-img-producto text-center bg-light rounded-3 p-2 mb-3">
+                                    <img src="https://images.unsplash.com/photo-1568640342690-3b25530433c7?w=300&q=80"
+                                        class="img-fluid" alt="Alimento">
+                                </div>
+                                <span class="text-muted small d-block mb-1">Por Hills</span>
+                                <h5 class="card-title fw-bold fs-6 text-dark text-truncate">Hills Pd Metabolic</h5>
+                                <div class="mt-auto section-precios">
+                                    <div class="fw-bold text-dark fs-5 mb-0">$235.900</div>
+                                    <div class="text-muted extra-small mb-1">($67,59/gr)</div>
+                                    <div class="text-muted small mb-3">Member $214.669 👑</div>
+                                    <span
+                                        class="badge border border-purple text-purple rounded-pill px-2 py-1 small">7.7
+                                        LB</span>
+                                    <button class="btn btn-agregar w-100 mt-3 py-2">Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 d-none d-md-block"></div>
+                        <div class="col-md-3 d-none d-md-block"></div>
+                        <div class="col-md-3 d-none d-md-block"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-indicators posiciones-puntitos">
+                <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner-app-seccion" class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <a href="#" class="d-block text-decoration-none contenedor-banner-app">
+                    <img src="img/app.webp" alt="Descarga la App Laika" class="img-fluid w-100 rounded-4 shadow-sm">
+                </a>
+            </div>
         </div>
     </section>
     <!--info empresa articulo-->
@@ -187,6 +441,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

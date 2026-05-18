@@ -1,169 +1,221 @@
-*{
-    margin: 0;
-    font-family: "Rubic", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 12px;
-    box-sizing: border-box;
-}
 #info-encabezado{
     background-color: #3D275A;
     color: aliceblue;
-    display: flex;
-    justify-content: center; /*deje un espacio entre ellos */
-    align-items: center;
-    padding: 4px;
+    width: 100%;
+}
+#info-encabezado span,
+#info-encabezado i{
+    font-size: 13px;
 }
 #info-general{
     background-color: #6A3A8E;
     color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
+    width: 100%;
+    padding: 15px 0px;
 }
-.logo{
-    width: 90px;
+.logo-laika {
+    height: 45px;
 }
-.buscador{
+@media (min-width: 768px) {
+    .logo-laika {
+        height: 65px;
+    }
+}
+@media (min-width: 768px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; 
+    }
+}
+@media (min-width: 768px) {
+    .nav-link:hover {
+        color: #A370C7 !important; 
+        transition: color 0.2s ease-in-out; 
+    }
+
+    .dropdown-item:hover {
+        background-color: #F4EEF8 !important; 
+        color: #6A3A8E !important; 
+    }
+}
+#carruselBanners {
+    padding-bottom: 20px;
+}
+
+
+#carruselBanners .carousel-indicators {
+    bottom: -25px; 
+    gap: 8px;     
+}
+
+#carruselBanners .carousel-indicators [data-bs-slide-to] {
+    width: 12px;                  
+    height: 12px;
+    border-radius: 50%;           
+    background-color: transparent;
+    border: 2px solid #6A3A8E;    
+    box-sizing: border-box;    
+}
+
+
+#carruselBanners .carousel-indicators .active {
+    background-color: #6A3A8E; 
+}
+.tarjeta-mascota {
+    overflow: hidden;
     position: relative;
-    max-width: 950px;
-    width: 100%;
-
+    min-height: 250px; 
 }
-#buscar{ /*cuadro del buscador*/
-    width: 100%;
-    height: 50px;
-    font-size: 15px;
-    border-radius: 10px; 
+
+
+.tarjeta-mascota .imagen-contenedor {
+    width: 45%;
+    display: flex;
+    align-items: flex-end; 
+}
+
+.tarjeta-mascota img {
+    max-height: 230px;
+    object-fit: contain;
+}
+
+
+.tarjeta-mascota .texto-contenedor {
+    width: 55%;
+}
+
+
+#perro {
+    background-color: #FFF293; 
+}
+
+#gato {
+    background-color: #A4E4FC; 
+}
+
+
+.btn-morado {
+    background-color: #6A3A8E;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 6px;
     border: none;
-    padding: 17px;
-    outline: none;
-}
-.bi-search{
-    position: absolute;
-    right: 25px;
-    top: 12px;
-    font-size: 20px;
-    color: gray;
+    transition: background-color 0.2s ease;
 }
 
-/* CUENTA */
-.cuenta{
-    color: white;
-    font-size: 3rem;
-    gap: 10px;
-    white-space: nowrap;
+.btn-morado:hover {
+    background-color: #532d70; 
+    color: #ffffff;
 }
-
-.cuenta i{
-    font-size: 2.3rem;
+.descripcion-mascota {
+    font-size: 0.95rem;
+    line-height: 1.3;
 }
-
-/* CARRITO */
-.carrito{
-    color: white;
-    font-size: 3rem;
-    text-decoration: none;
+#mascotas .btn-morado {
+    background-color: #6A3A8E !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none !important;
 }
-nav ul{
-    list-style: none; 
-    margin: 0; 
-    padding: 0;
+#mascotas .btn-morado:hover {
+    background-color: #532d70 !important;
+    color: #ffffff !important;
 }
-nav > ul{
+/* Altura y proporciones de la Tarjeta Alargada */
+.card-producto {
+    min-height: 440px; /* Alarga la tarjeta verticalmente en computadoras */
     display: flex;
-    background-color: aliceblue;
-}
-nav > ul> li{
-    position: relative;/*respeta el espacio cuando yo lo muevo*/
-    padding: 15px 20px;
-    color:black;
-    cursor:pointer; /*para que se vea la maito del mouse*/
-
-}
-nav >ul>li:hover{
-
-    background-color:gray;
-}
-nav ul ul {
-    display: none; /*no lo muetre*/
-    position: absolute;
-    top: 100% ;/*arriba todo lo que pueda*/
-    left: 0;
-    background-color: #C7C2C1;
-    min-width: 150px;
-}
-nav ul ul li{
-    color: black;
-    padding: 10px;
-}
-/*para mostrar el submenu*/
-nav ul li:hover>ul{
-    display: block;
-}
-nav ul ul li:hover{
-    background-color: blueviolet;
-}
-header,nav{
-    position:fixed;
-    left: 0; /*ubiquese pegado a la izq*/
-    width: 100%;
-    z-index: 1000;
-}
-header{
-    top:0; /* va primero el header*/
+    flex-direction: column;
 }
 
-nav{
-    top: 99px; /*se me acomoda fijo con el header*/
-}
-
-body{
-    margin-top: 160px; /*espacio para que el banner no quede pegado al nav*/
-}
-#banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-}
-#banner img {
-    width: 80%;
-    max-width: 1200px;
-    border-radius: 10px;
-}
-#mascotas{ /*contenedor externo//mascotas contenedor es el padre */
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    gap: 20px; /*para separar gato de perro */
-
-}
-/*contenedor interno77inicio*/
-
-#perro{
-    background-color: #FFFD8A;
-    border-radius: 10px;
-}
-
-#gato{
-    background-color: #78bcdbaf;
-    border-radius: 10px;
-}
-/*vamos a llamar al perro y al gato*/
-#perro,#gato{
+/* El contenedor gris de la imagen (más alto y centrado) */
+.contenedor-img-producto {
+    height: 180px; /* Le da buena presencia visual a la parte superior */
     display: flex;
     align-items: center;
-    gap: 15px;
-    width: 500px;
-    height: 410px; /*alto*/
+    justify-content: center;
+    overflow: hidden;
 }
-#perro img, #gato img{
-    width: 300px;
+
+.contenedor-img-producto img {
+    max-height: 150px;
+    object-fit: contain;
 }
-/*padding para que se separe de la cajita del contenido*/
+
+/* Ajustes finos de texto basado en tu captura */
+.extra-small {
+    font-size: 0.75rem;
+}
+
+.section-precios {
+    line-height: 1.2;
+}
+
+#carruselProductos {
+    padding-bottom: 30px;
+    position: relative;
+}
+
+#carruselProductos .posiciones-puntitos {
+    bottom: -15px;
+    margin-bottom: 0;
+    gap: 8px;
+}
+
+#carruselProductos .posiciones-puntitos [data-bs-slide-to] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #6A3A8E !important;
+    box-sizing: border-box;
+}
+
+#carruselProductos .posiciones-puntitos .active {
+    background-color: #6A3A8E !important;
+}
+
+#favoritos-seccion .btn-agregar {
+    background-color: #6A3A8E !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none !important;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+#favoritos-seccion .btn-agregar:hover {
+    background-color: #532d70 !important;
+}
+
+.text-purple { color: #6A3A8E !important; }
+.border-purple { border-color: #6A3A8E !important; }
+
+/* Ajuste adaptable para celulares */
+@media (max-width: 576px) {
+    .card-producto {
+        min-height: 380px; /* Se acopla un poco en pantallas pequeñas de móvil */
+    }
+    .contenedor-img-producto {
+        height: 130px;
+    }
+    .contenedor-img-producto img {
+        max-height: 110px;
+    }
+}
+/* Contenedor del banner para darle un sutil efecto interactivo */
+.contenedor-banner-app {
+    overflow: hidden;
+    border-radius: 16px; /* Equivalente al rounded-4 de Bootstrap */
+}
+
+/* Efecto hover suave al pasar el cursor */
+.contenedor-banner-app:hover {
+    transform: scale(1.01); /* Se agranda un poquitico casi imperceptible */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
 .parrafo{
     padding: 20px;
     font-weight: bold; 
