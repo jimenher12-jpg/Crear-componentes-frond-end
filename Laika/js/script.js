@@ -21,15 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
         item.classList.add("carousel-item");
         item.setAttribute("data-bs-interval", "4000"); 
 
-        // Obligatorio: La primera imagen tiene que iniciar con la clase active
+        
         if (index === 0) {
             item.classList.add("active");
         }
 
-        // AQUÍ QUEDÓ CORREGIDO: comillas después del + 1 y luego el >
+        
         item.innerHTML = `<img src="${url}" class="d-block w-100" alt="imagenes ${index + 1}">`;
 
-        // Lo metemos al contenedor del HTML
+        
         contenedorImagenes.appendChild(item);
     });
-}); // <--- Asegúrate de tener estas llaves y paréntesis para cerrar el DOMContentLoaded
+}); 

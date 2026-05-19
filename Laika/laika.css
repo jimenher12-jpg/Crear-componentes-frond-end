@@ -122,16 +122,13 @@
     background-color: #532d70 !important;
     color: #ffffff !important;
 }
-/* Altura y proporciones de la Tarjeta Alargada */
 .card-producto {
-    min-height: 440px; /* Alarga la tarjeta verticalmente en computadoras */
+    min-height: 440px; 
     display: flex;
     flex-direction: column;
 }
-
-/* El contenedor gris de la imagen (más alto y centrado) */
 .contenedor-img-producto {
-    height: 180px; /* Le da buena presencia visual a la parte superior */
+    height: 180px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,8 +139,6 @@
     max-height: 150px;
     object-fit: contain;
 }
-
-/* Ajustes finos de texto basado en tu captura */
 .extra-small {
     font-size: 0.75rem;
 }
@@ -193,10 +188,9 @@
 .text-purple { color: #6A3A8E !important; }
 .border-purple { border-color: #6A3A8E !important; }
 
-/* Ajuste adaptable para celulares */
 @media (max-width: 576px) {
     .card-producto {
-        min-height: 380px; /* Se acopla un poco en pantallas pequeñas de móvil */
+        min-height: 380px; 
     }
     .contenedor-img-producto {
         height: 130px;
@@ -205,16 +199,96 @@
         max-height: 110px;
     }
 }
-/* Contenedor del banner para darle un sutil efecto interactivo */
+
 .contenedor-banner-app {
     overflow: hidden;
-    border-radius: 16px; /* Equivalente al rounded-4 de Bootstrap */
+    border-radius: 16px; 
 }
 
-/* Efecto hover suave al pasar el cursor */
+
 .contenedor-banner-app:hover {
-    transform: scale(1.01); /* Se agranda un poquitico casi imperceptible */
+    transform: scale(1.01); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+/* ==========================================
+   Estilos Sección 1: Perro y Gato 
+   ========================================== */
+.card-categoria-pet {
+    min-height: 180px;
+    border: none;
+}
+
+.max-w-250 {
+    max-width: 250px;
+}
+
+.btn-comprar {
+    background-color: #6A3A8E !important;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #532d70 !important;
+}
+
+.contenedor-img-pet {
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+    width: 45%;
+    max-width: 220px;
+    height: 110%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.image-mascota {
+    object-fit: contain;
+    width: 100%;
+}
+
+.tarjeta-servicio {
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.shadow-hover:hover {
+    transform: translateY(-3px);
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.min-h-250 {
+    min-height: 250px;
+}
+
+.height-150 {
+    height: 155px;
+}
+
+@media (max-width: 768px) {
+    .card-categoria-pet {
+        min-height: 140px;
+        padding: 1.25rem !important;
+    }
+    .contenedor-img-pet {
+        width: 35%;
+        right: 5px;
+    }
+    .min-h-250 {
+        height: 200px;
+        min-height: auto;
+    }
+    .height-150 {
+        height: 130px;
+    }
+    .badge-servicio {
+        font-size: 0.95rem;
+        padding: 8px 22px 8px 15px;
+    }
 }
 .parrafo{
     padding: 20px;
@@ -241,14 +315,13 @@ article h2{
     font-size: 15px;
     text-align: justify;
 }
-/*flex17 para que ambas tengan el mismo tamaño debo llamar a la caja de imagenes */
-.caja-imagenes, article{ /*selector articulo, selector caja imagen */
+.caja-imagenes, article{ 
     flex: 1;
     gap: 10px;
     flex-wrap: wrap;
     height: auto; 
 }
-.caja-imagenes img{/*vayase a caja de imagen, agarre las etiquetas de caja de imagen, dividalas, que crezcan de pende del contenedor*/
+.caja-imagenes img{
     flex: 1 1 cal(50% -10px);
     height: 100px;
     border-radius: 10px;
