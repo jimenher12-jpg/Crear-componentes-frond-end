@@ -1,370 +1,492 @@
-#info-encabezado{
-    background-color: #3D275A;
-    color: aliceblue;
-    width: 100%;
+#info-encabezado {
+  background-color: #3d275a;
+  color: aliceblue;
+  width: 100%;
 }
 #info-encabezado span,
-#info-encabezado i{
-    font-size: 13px;
+#info-encabezado i {
+  font-size: 13px;
 }
-#info-general{
-    background-color: #6A3A8E;
-    color: #FFFFFF;
-    width: 100%;
-    padding: 15px 0px;
+#info-general {
+  background-color: #6a3a8e;
+  color: #ffffff;
+  width: 100%;
+  padding: 15px 0px;
 }
 .logo-laika {
-    height: 45px;
+  height: 45px;
 }
 @media (min-width: 768px) {
-    .logo-laika {
-        height: 65px;
-    }
+  .logo-laika {
+    height: 65px;
+  }
 }
 @media (min-width: 768px) {
-    .nav-item.dropdown:hover .dropdown-menu {
-        display: block;
-        margin-top: 0; 
-    }
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
 }
 @media (min-width: 768px) {
-    .nav-link:hover {
-        color: #A370C7 !important; 
-        transition: color 0.2s ease-in-out; 
-    }
+  .nav-link:hover {
+    color: #a370c7 !important;
+    transition: color 0.2s ease-in-out;
+  }
 
-    .dropdown-item:hover {
-        background-color: #F4EEF8 !important; 
-        color: #6A3A8E !important; 
-    }
+  .dropdown-item:hover {
+    background-color: #f4eef8 !important;
+    color: #6a3a8e !important;
+  }
 }
 #carruselBanners {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
-
 #carruselBanners .carousel-indicators {
-    bottom: -25px; 
-    gap: 8px;     
+  bottom: -25px;
+  gap: 8px;
 }
 
 #carruselBanners .carousel-indicators [data-bs-slide-to] {
-    width: 12px;                  
-    height: 12px;
-    border-radius: 50%;           
-    background-color: transparent;
-    border: 2px solid #6A3A8E;    
-    box-sizing: border-box;    
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #6a3a8e;
+  box-sizing: border-box;
 }
-
 
 #carruselBanners .carousel-indicators .active {
-    background-color: #6A3A8E; 
+  background-color: #6a3a8e;
 }
 .tarjeta-mascota {
-    overflow: hidden;
-    position: relative;
-    min-height: 250px; 
+  overflow: hidden;
+  position: relative;
+  min-height: 250px;
 }
 
-
 .tarjeta-mascota .imagen-contenedor {
-    width: 45%;
-    display: flex;
-    align-items: flex-end; 
+  width: 45%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .tarjeta-mascota img {
-    max-height: 230px;
-    object-fit: contain;
+  max-height: 230px;
+  object-fit: contain;
 }
-
 
 .tarjeta-mascota .texto-contenedor {
-    width: 55%;
+  width: 55%;
 }
 
-
 #perro {
-    background-color: #FFF293; 
+  background-color: #fff293;
 }
 
 #gato {
-    background-color: #A4E4FC; 
+  background-color: #a4e4fc;
 }
 
-
 .btn-morado {
-    background-color: #6A3A8E;
-    color: #ffffff;
-    font-weight: 600;
-    border-radius: 6px;
-    border: none;
-    transition: background-color 0.2s ease;
+  background-color: #6a3a8e;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  transition: background-color 0.2s ease;
 }
 
 .btn-morado:hover {
-    background-color: #532d70; 
-    color: #ffffff;
+  background-color: #532d70;
+  color: #ffffff;
 }
 .descripcion-mascota {
-    font-size: 0.95rem;
-    line-height: 1.3;
+  font-size: 0.95rem;
+  line-height: 1.3;
 }
 #mascotas .btn-morado {
-    background-color: #6A3A8E !important;
-    color: #ffffff !important;
-    font-weight: 600;
-    border-radius: 6px;
-    border: none !important;
+  background-color: #6a3a8e !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none !important;
 }
 #mascotas .btn-morado:hover {
-    background-color: #532d70 !important;
-    color: #ffffff !important;
+  background-color: #532d70 !important;
+  color: #ffffff !important;
 }
 .card-producto {
-    min-height: 440px; 
-    display: flex;
-    flex-direction: column;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
 }
 .contenedor-img-producto {
-    height: 180px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .contenedor-img-producto img {
-    max-height: 150px;
-    object-fit: contain;
+  max-height: 150px;
+  object-fit: contain;
 }
 .extra-small {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 
 .section-precios {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
 #carruselProductos {
-    padding-bottom: 30px;
-    position: relative;
+  padding-bottom: 30px;
+  position: relative;
 }
 
 #carruselProductos .posiciones-puntitos {
-    bottom: -15px;
-    margin-bottom: 0;
-    gap: 8px;
+  bottom: -15px;
+  margin-bottom: 0;
+  gap: 8px;
 }
 
 #carruselProductos .posiciones-puntitos [data-bs-slide-to] {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 2px solid #6A3A8E !important;
-    box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #6a3a8e !important;
+  box-sizing: border-box;
 }
 
 #carruselProductos .posiciones-puntitos .active {
-    background-color: #6A3A8E !important;
+  background-color: #6a3a8e !important;
 }
 
 #favoritos-seccion .btn-agregar {
-    background-color: #6A3A8E !important;
-    color: #ffffff !important;
-    font-weight: 600;
-    border-radius: 10px;
-    border: none !important;
-    font-size: 0.95rem;
-    transition: background-color 0.2s ease;
+  background-color: #6a3a8e !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none !important;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
 }
 
 #favoritos-seccion .btn-agregar:hover {
-    background-color: #532d70 !important;
+  background-color: #532d70 !important;
 }
 
-.text-purple { color: #6A3A8E !important; }
-.border-purple { border-color: #6A3A8E !important; }
+.text-purple {
+  color: #6a3a8e !important;
+}
+.border-purple {
+  border-color: #6a3a8e !important;
+}
 
 @media (max-width: 576px) {
-    .card-producto {
-        min-height: 380px; 
-    }
-    .contenedor-img-producto {
-        height: 130px;
-    }
-    .contenedor-img-producto img {
-        max-height: 110px;
-    }
+  .card-producto {
+    min-height: 380px;
+  }
+  .contenedor-img-producto {
+    height: 130px;
+  }
+  .contenedor-img-producto img {
+    max-height: 110px;
+  }
 }
 
 .contenedor-banner-app {
-    overflow: hidden;
-    border-radius: 16px; 
+  overflow: hidden;
+  border-radius: 16px;
 }
-
 
 .contenedor-banner-app:hover {
-    transform: scale(1.01); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
 }
 .card-categoria-pet {
-    min-height: 180px;
-    border: none;
+  min-height: 180px;
+  border: none;
 }
 
 .max-w-250 {
-    max-width: 250px;
+  max-width: 250px;
 }
 
 .btn-comprar {
-    background-color: #6A3A8E !important;
-    font-size: 0.9rem;
-    transition: background-color 0.2s ease;
+  background-color: #6a3a8e !important;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
 }
 
 .btn-comprar:hover {
-    background-color: #532d70 !important;
+  background-color: #532d70 !important;
 }
 
 .contenedor-img-pet {
-    position: absolute;
-    right: 10px;
-    bottom: -10px;
-    width: 45%;
-    max-width: 220px;
-    height: 110%;
-    display: flex;
-    align-items: flex-end;
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
+  width: 45%;
+  max-width: 220px;
+  height: 110%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .image-mascota {
-    object-fit: contain;
-    width: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
 .tarjeta-servicio {
-    position: relative;
-    transition: transform 0.2s ease;
+  position: relative;
+  transition: transform 0.2s ease;
 }
 
 .shadow-hover:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 .collage {
-    display: flex;
-    gap: 15px;
-    height: 500px;
+  display: flex;
+  gap: 15px;
+  height: 100%;
 }
 
 .columna {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
 }
 
 .img-box {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 5px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 /* tamaños */
 .grande {
-    flex: 65%;
+  flex: 65%;
 }
 
 .pequena {
-    flex: 35%;
+  flex: 35%;
 }
 
 /* imágenes */
 .img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.linea-con-icono{
-    display: flex;
-    align-items:center ;
-    gap: 10px;
-    margin: 10px 10px;
+#laika-info-seccion .row {
+  flex-wrap: wrap;
 }
-.linea-con-icono img{
-   width: 50px;
-}
-.linea-con-icono hr {
-    flex:1;
-    border: none;
-    background-color: aliceblue;
-    height: 2px;
-}
-.linea-con-icono{
-    display: flex;
-    align-items:center ;
-    gap: 10px;
-    margin: 10px 10px;
-}
-.linea-con-icono img{
-   width: 50px;
-}
-.linea-con-icono hr {
-    flex:1;
-    border: none;
-    background-color: aliceblue;
-    height: 2px;
-}
-footer{
-    display: flex;
-    flex-wrap: wrap;
-    gap:30px; 
-    padding: 20px;
-}
-footer>div{
-    flex: 1;
-    min-width: 200px;
-}
-.info-legal{
-    flex:1 1 100%;
-    border-top: 1px solid gray;
-    padding: 20px 50px;
-}
-.info-legal p{
-    margin-bottom: 8px
-}
-h3{
-    color: blue;
-    font-size: 15px;
-    margin-bottom: 8px;
-    /*font-weight:bold;*/
-}
-footer span{
-    display: block;
-    margin-bottom: 8px;
-}
-.copyright-row{
-    display: flex;
-    align-items: center;
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #laika-info-seccion .col-md-6.order-md-2 {
+    display: flex !important;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
+  }
+  .main-article {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .main-title {
+    flex: 0 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  .content-wrapper {
+    flex: 1 1 auto;
+  }
+
+  .btn-ver-mas {
+    display: block;
+    margin-top: auto;
+    color: #6a3a8e;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 10px;
+  }
 }
-.copyright-row img{
-    max-width: 300px;
-    height: auto;
+
+.brand-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
-input[type=email]{
-    width: 150px;
-    border-radius: 10px;
-    font-size: 12px;
-    padding: 12px 16px;
+
+.brand-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
 }
-input[type=submit]{
-    background-color: #560075;
-    color: aliceblue;
-    font-size: 12px;
-    border: none;
+
+.brand-img {
+  max-height: 75px;
+  max-width: 85%;
+  object-fit: contain;
+}
+
+.custom-indicators {
+  position: relative !important;
+  bottom: -10px !important;
+  margin-bottom: 0px !important;
+}
+
+.custom-indicators button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: #d1c4e9 !important;
+  border: none !important;
+  opacity: 1 !important;
+  margin: 0 5px !important;
+  transition: background-color 0.3s ease;
+}
+
+.custom-indicators button.active {
+  background-color: #6a3a8e !important;
+}
+
+@media (max-width: 768px) {
+  .brand-card {
+    height: 110px;
+    padding: 10px;
+  }
+  .brand-img {
+    max-height: 55px;
+  }
+}
+/* --- ESTILOS DE LA LÍNEA Y LOGO EN EL BORDE --- */
+.footer-divider {
+  border: 0;
+  border-top: 1px solid #eaeaea;
+  margin: 0;
+  opacity: 1;
+}
+
+.footer-logo-badge {
+  position: absolute;
+  top: 50%;
+  left: 10%; /* Se alinea horizontalmente a la izquierda */
+  transform: translateY(-50%);
+  padding: 0 15px;
+}
+
+.footer-logo-badge img {
+  height: 45px;
+  width: auto;
+}
+
+/* --- TÍTULOS Y TEXTOS DEL FOOTER --- */
+.footer-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4a1e60; /* El morado oscuro del título */
+  margin-bottom: 1.25rem;
+}
+
+.footer-links span {
+  color: #555555;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* --- CAJA DE SUSCRIPCIÓN --- */
+.footer-subscribe-form {
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  max-width: 360px;
+}
+
+.footer-subscribe-form .form-control {
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn-subscribe {
+  background-color: #6a3a8e;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+}
+/* --- NUEVO CAMPO DE CORREO INDEPENDIENTE --- */
+.newsletter-input {
+  border: 1px solid #cccccc !important;
+  border-radius: 8px !important; /* Bordes ligeramente redondeados */
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+  height: 44px; /* Altura idéntica para ambos elementos */
+}
+
+/* --- BOTÓN INDEPENDIENTE CON LA FLECHITA MORADA --- */
+.btn-newsletter-arrow {
+  background-color: #6a3a8e  !important; 
+  color: #ffffff;
+  border: none;
+  border-radius: 8px; /* Redondeado igual al del input */
+  height: 44px;
+  width: 44px; /* Ancho idéntico para que quede perfectamente cuadrado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Efecto visual cuando el usuario pasa el mouse por encima de la flecha */
+.btn-newsletter-arrow:hover {
+  background-color: #532c71;
+  color: #ffffff;
+  transform: scale(1.05); /* Pequeño pulso de interacción */
+}
+
+.btn-newsletter-arrow i {
+    color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+/* --- TEXTO LEGAL ABAJO --- */
+.info-legal {
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+/* --- RESPONSIVE (MÓVIL Y TABLET) --- */
+@media (max-width: 767.98px) {
+  .footer-logo-badge {
+    left: 50%;
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Se centra automáticamente si la pantalla es pequeña */
+  }
+  .footer-title {
+    margin-bottom: 0.75rem;
+  }
 }
