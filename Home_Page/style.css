@@ -1,0 +1,368 @@
+/* ==========================================================================
+   VARIABLES DE DISEÑO M&A
+   ========================================================================== */
+:root {
+    --dorado-branding: #FFC600;
+    --dorado-hover: #FFD43E;
+    --gris-borde: #30302E;
+    --negro-absoluto: #000000;
+    --texto-blanco: #FFFFFF;
+    
+    --fuente-titulos: 'Times New Roman', Times, serif;
+    --fuente-cuerpo: 'Cloud loop', 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ==========================================================================
+   ESTILOS BASE
+   ========================================================================== */
+body {
+    background-color: var(--negro-absoluto);
+    color: var(--texto-blanco);
+    font-family: var(--fuente-cuerpo);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    letter-spacing: 1px;
+}
+
+.title-options {
+    font-family: var(--fuente-titulos) !important;
+}
+
+.text-gold {
+    color: var(--dorado-branding);
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.sub-bar {
+    width: 50px;
+    height: 3px;
+    background-color: var(--dorado-branding);
+    margin: 15px auto;
+}
+
+/* ==========================================================================
+   NAVBAR (Estructura fija con Flexbox para asegurar alineación a la derecha)
+   ========================================================================== */
+.custom-navbar {
+    background-color: var(--negro-absoluto);
+    border-bottom: 1px solid var(--gris-borde);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Empuja el logo a la izq y botones a la der */
+    align-items: center;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.brand-logo {
+    color: var(--dorado-branding);
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-family: var(--fuente-titulos);
+    text-decoration: none;
+}
+
+.auth-buttons-group {
+    display: flex;
+    gap: 15px; /* Espacio horizontal entre los dos botones */
+}
+
+/* ==========================================================================
+   BOTONES PERSONALIZADOS (Curvatura moderada redondeada de 6px)
+   ========================================================================== */
+.btn-custom-outline {
+    color: var(--texto-blanco);
+    border: 1px solid var(--dorado-branding);
+    background: transparent;
+    border-radius: 6px;
+    padding: 8px 22px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-custom-outline:hover {
+    background-color: var(--dorado-branding);
+    color: var(--negro-absoluto);
+}
+
+.btn-custom-solid {
+    background-color: var(--dorado-branding);
+    color: var(--negro-absoluto);
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 8px 22px;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.btn-custom-solid:hover {
+    background-color: var(--dorado-hover);
+}
+
+.btn-sm-custom {
+    padding: 6px 18px;
+}
+
+/* ==========================================================================
+   HERO SECTION (ACTUALIZADA Y CENTRADA)
+   ========================================================================== */
+.hero-section {
+    position: relative; /* Clave: Contiene la imagen y el filtro dentro del bloque */
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Evita que la imagen se salga de los límites */
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen a todo el espacio sin deformarla ni ponerla borrosa */
+    object-position: center 50%;
+    z-index: 1; /* Va al fondo */
+}
+
+/* Capa oscura que emula el efecto de degradado que tenías antes */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85));
+    z-index: 2; /* Va en el medio */
+}
+
+/* El contenedor del texto flota por encima de la imagen y el filtro */
+.hero-content {
+    position: relative;
+    z-index: 3; /* Va al frente de todo */
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.text-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-left: auto;  
+    margin-right: auto; 
+    text-align: center;
+}
+
+/* ==========================================================================
+   CONTENEDOR HORIZONTAL ESTRICTO (Fuerza las tarjetas a estar AL LADO)
+   ========================================================================== */
+#opciones .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+   .horizontal-cards-container {
+    display: flex;
+    flex-direction: row;       /* Las alinea en fila horizontal */
+    justify-content: center;   /* Centra ambas tarjetas en la pantalla */
+    gap: 30px;                 /* Separa una tarjeta de la otra */
+    flex-wrap: nowrap;         /* Evita que se bajen bajo ninguna circunstancia en PC */
+    width: 100%;
+    margin-top: 30px;
+}
+
+.custom-menu-card {
+    position: relative;
+    background-color: var(--negro-absoluto);
+    border-radius: 20px;       /* Bordes redondeados de tus capturas */
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 48%;                /* Ocupan casi la mitad cada una para ir al lado */
+    max-width: 550px;    
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);     /* Evita que se vuelvan gigantes en pantallas enormes */
+}
+.card-img-wrap {
+    height: 380px;
+    overflow: hidden;
+}
+
+.custom-menu-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.65;
+    transition: transform 0.5s;
+}
+
+.custom-menu-card:hover img {
+    transform: scale(1.04);
+}
+
+/* El botón amarillo posicionado abajo en el centro de la tarjeta */
+.card-btn {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dorado-branding);
+    color: var(--negro-absoluto);
+    font-family: var(--fuente-cuerpo);
+    font-weight: bold;
+    padding: 12px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    transition: all 0.3s;
+}
+
+.card-btn:hover {
+    background-color: var(--dorado-hover);
+    color: var(--negro-absoluto);
+}
+
+/* ==========================================================================
+   SECCIONES ADICIONALES: CTA & FOOTER PREMIUM (ESTRUCTURA REAL)
+   ========================================================================== */
+
+/* --- Sección CTA --- */
+.cta-banner {
+    background: linear-gradient(rgba(217, 173, 38, 0.04), rgba(0, 0, 0, 0.95));
+    border-top: 1px solid rgba(255, 198, 0, 0.12);
+    padding: 60px 20px;
+    width: 100%;
+}
+
+.cta-container {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #a0a0a0;
+}
+
+/* El botón de registro con su separación ideal y esquinas moderadas de 6px */
+.btn-registrar {
+    display: inline-block;
+    background-color: var(--dorado-branding);
+    color: var(--negro-absoluto);
+    font-family: var(--fuente-cuerpo);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    padding: 14px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 35px; /* Aquí controlamos la separación perfecta del texto */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-registrar:hover {
+    background-color: var(--dorado-hover);
+    color: var(--negro-absoluto);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 198, 0, 0.25);
+}
+
+/* --- Footer Premium --- */
+.footer-premium {
+    background-color: #000000;
+    padding: 40px 20px 30px 20px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Rejilla de horarios: se divide en 3 columnas perfectas en PC */
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.horario-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.dia-titulo {
+    color: var(--dorado-branding);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.hora-texto {
+    color: #cccccc;
+    font-size: 0.95rem;
+}
+
+/* Estilo apagado elegante para el día cerrado */
+.horario-card.cerrado .dia-titulo {
+    color: #555555;
+}
+.horario-card.cerrado .hora-texto {
+    color: #444444;
+}
+
+/* Línea divisoria horizontal implacable de lado a lado */
+.footer-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.08);
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.copyright-wrap {
+    text-align: center;
+}
+
+/* --- Soporte de Adaptabilidad para Celulares --- */
+@media (max-width: 768px) {
+    .horarios-grid {
+        grid-template-columns: 1fr; /* Se vuelven una sola columna ordenada si se ve en celular */
+        gap: 15px;
+    }
+}
