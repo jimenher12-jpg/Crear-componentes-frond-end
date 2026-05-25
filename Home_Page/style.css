@@ -1,56 +1,64 @@
-/* ==========================================================================
-   VARIABLES DE DISEÑO M&A
-   ========================================================================== */
+/* ══════════════════════════════════════════════
+   VARIABLES GLOBALES
+══════════════════════════════════════════════ */
 :root {
     --dorado-branding: #FFC600;
     --dorado-hover: #FFD43E;
     --gris-borde: #30302E;
     --negro-absoluto: #000000;
     --texto-blanco: #FFFFFF;
-    
+ 
     --fuente-titulos: 'Times New Roman', Times, serif;
-    --fuente-cuerpo: 'Cloud loop', 'Segoe UI', Roboto, sans-serif;
+    --fuente-cuerpo: 'Segoe UI', Roboto, sans-serif;
 }
-
-/* ==========================================================================
-   ESTILOS BASE
-   ========================================================================== */
+ 
+/* ══════════════════════════════════════════════
+   BASE
+══════════════════════════════════════════════ */
 body {
     background-color: var(--negro-absoluto);
     color: var(--texto-blanco);
     font-family: var(--fuente-cuerpo);
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
 }
-
+ 
 h1, h2, h3, h4 {
     font-family: var(--fuente-titulos);
     letter-spacing: 1px;
 }
-
-.title-options {
-    font-family: var(--fuente-titulos) !important;
-}
-
+ 
 .text-gold {
     color: var(--dorado-branding);
 }
-
+ 
 .section-padding {
     padding: 80px 0;
 }
-
+ 
 .sub-bar {
     width: 50px;
     height: 3px;
     background-color: var(--dorado-branding);
-    margin: 15px auto;
+    margin: 15px auto 0 auto;
 }
-
-/* ==========================================================================
-   NAVBAR (Estructura fija con Flexbox para asegurar alineación a la derecha)
-   ========================================================================== */
+ 
+/* Eyebrow label encima de títulos de sección */
+.section-eyebrow {
+    color: var(--dorado-branding);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+ 
+.title-options {
+    font-family: var(--fuente-titulos) !important;
+}
+ 
+/* ══════════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════════ */
 .custom-navbar {
     background-color: var(--negro-absoluto);
     border-bottom: 1px solid var(--gris-borde);
@@ -59,16 +67,16 @@ h1, h2, h3, h4 {
     top: 0;
     z-index: 1000;
 }
-
+ 
 .navbar-container {
     display: flex;
-    justify-content: space-between; /* Empuja el logo a la izq y botones a la der */
+    justify-content: space-between;
     align-items: center;
     max-width: 1320px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
+ 
 .brand-logo {
     color: var(--dorado-branding);
     font-weight: bold;
@@ -76,31 +84,31 @@ h1, h2, h3, h4 {
     font-family: var(--fuente-titulos);
     text-decoration: none;
 }
-
+ 
 .auth-buttons-group {
     display: flex;
-    gap: 15px; /* Espacio horizontal entre los dos botones */
+    gap: 15px;
 }
-
-/* ==========================================================================
-   BOTONES PERSONALIZADOS (Curvatura moderada redondeada de 6px)
-   ========================================================================== */
+ 
+/* ══════════════════════════════════════════════
+   BOTONES REUTILIZABLES
+══════════════════════════════════════════════ */
 .btn-custom-outline {
     color: var(--texto-blanco);
     border: 1px solid var(--dorado-branding);
-    background: transparent;
+    background-color: transparent;
     border-radius: 6px;
     padding: 8px 22px;
     text-decoration: none;
     transition: all 0.3s;
     font-size: 0.9rem;
 }
-
+ 
 .btn-custom-outline:hover {
     background-color: var(--dorado-branding);
     color: var(--negro-absoluto);
 }
-
+ 
 .btn-custom-solid {
     background-color: var(--dorado-branding);
     color: var(--negro-absoluto);
@@ -112,26 +120,28 @@ h1, h2, h3, h4 {
     transition: all 0.3s;
     font-size: 0.9rem;
     display: inline-block;
+    cursor: pointer;
 }
-
+ 
 .btn-custom-solid:hover {
     background-color: var(--dorado-hover);
 }
-
+ 
 .btn-sm-custom {
     padding: 6px 18px;
 }
-
-/* ==========================================================================
-   HERO SECTION (ACTUALIZADA Y CENTRADA)
-   ========================================================================== */
+ 
+/* ══════════════════════════════════════════════
+   HERO SECTION (CORREGIDO Y ESPACIADO)
+══════════════════════════════════════════════ */
 .hero-section {
-    position: relative; /* Clave: Contiene la imagen y el filtro dentro del bloque */
-    min-height: 75vh;
+    position: relative;
+    min-height: 95vh; /* Aumentado de 80vh a 95vh para que la pantalla respire y no se vea amontonada */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Evita que la imagen se salga de los límites */
+    overflow: hidden;
+    width: 100%;
 }
 
 .hero-img {
@@ -140,92 +150,295 @@ h1, h2, h3, h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen a todo el espacio sin deformarla ni ponerla borrosa */
-    object-position: center 50%;
-    z-index: 1; /* Va al fondo */
+    object-fit: cover;
+    object-position: center 40%;
+    z-index: 1;
+    filter: brightness(0.7) contrast(1.1);
 }
 
-/* Capa oscura que emula el efecto de degradado que tenías antes */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85));
-    z-index: 2; /* Va en el medio */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.60) 50%,
+        rgba(0, 0, 0, 0.80) 100%
+    );
+    z-index: 2;
 }
 
-/* El contenedor del texto flota por encima de la imagen y el filtro */
-.hero-content {
+/* Contenedor del contenido del hero */
+.hero-content-wrapper {
     position: relative;
-    z-index: 3; /* Va al frente de todo */
-    display: flex;
-    flex-direction: column;
+    z-index: 3;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .hero-title {
-    font-size: 4.5rem;
+    font-size: 6.5rem; /* Agrandado a 6.5rem para un impacto visual imponente */
     font-weight: bold;
-    line-height: 1.1;
+    line-height: 0.85; /* CORREGIDO: Evita que "M&A" se monte encima de "Barbería" */
     text-align: center;
+    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.9);
+    margin-top: -15px;
+}
+.hero-title-barberia {
+    display: block;
+    color: #ffffff;
+    font-size: 4.2rem; 
+    letter-spacing: 8px; 
+    text-transform: uppercase;
+    text-shadow: 0 0 40px rgba(255,198,0,0.3), 0 2px 15px rgba(0,0,0,0.9);
+    margin-bottom: -10px; /* <-- MARGEN NEGATIVO: Obliga a "M&A" a pegarse hacia arriba */
 }
 
 .text-description {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin-left: auto;  
-    margin-right: auto; 
+    font-size: 1.3rem; /* Aumentado ligeramente para máxima legibilidad */
+    font-weight: 500;
+    max-width: 650px; /* Un poco más amplio para albergar el texto cómodamente */
+    margin: 3.5rem auto 4rem auto; /* DISTRIBUCIÓN: 3.5rem de espacio arriba (título) y 4rem abajo (botones) */
     text-align: center;
+    line-height: 1.7;
+    color: #FFFFFF;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 1);
 }
 
-/* ==========================================================================
-   CONTENEDOR HORIZONTAL ESTRICTO (Fuerza las tarjetas a estar AL LADO)
-   ========================================================================== */
+.hero-buttons {
+    display: flex;
+    gap: 20px; /* Más espacio entre el botón de reserva y el de ver opciones */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+ 
+.barbers-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 70px;
+    box-sizing: border-box;
+}
+ 
+.barbers-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+ 
+.barbers-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+ 
+/* ── Tarjeta individual de barbero ── */
+.barber-card {
+    flex: 0 0 calc((100% - 48px) / 3);   /* 3 visibles en desktop */
+    background-color: #0a0a0a;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 198, 0, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+ 
+.barber-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 198, 0, 0.45);
+    box-shadow: 0 16px 40px rgba(255, 198, 0, 0.12);
+}
+ 
+.barber-img-wrap {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+}
+ 
+.barber-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: grayscale(20%);
+}
+ 
+.barber-card:hover .barber-img-wrap img {
+    transform: scale(1.06);
+    filter: grayscale(0%);
+}
+ 
+.barber-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+    z-index: 1;
+}
+ 
+.barber-info {
+    padding: 20px 22px 24px;
+    text-align: center;
+}
+ 
+.barber-name {
+    font-family: var(--fuente-titulos);
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+ 
+.barber-specialty {
+    display: block;
+    font-size: 0.80rem;
+    color: var(--dorado-branding);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+ 
+.barber-stars {
+    color: var(--dorado-branding);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+ 
+/* ── Flechas de navegación ── */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: var(--dorado-branding);
+    color: var(--negro-absoluto);
+    border: none;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s, transform 0.25s;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+ 
+.carousel-arrow:hover {
+    background-color: var(--dorado-hover);
+    transform: translateY(-50%) scale(1.08);
+}
+ 
+.carousel-arrow-prev { left: 14px; }
+.carousel-arrow-next { right: 14px; }
+ 
+/* ── Dots ── */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 32px;
+    padding-bottom: 8px;
+}
+ 
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,198,0,0.5);
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 0;
+}
+ 
+.carousel-dot.active {
+    background-color: var(--dorado-branding);
+    transform: scale(1.25);
+    border-color: var(--dorado-branding);
+}
+ 
 #opciones .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
-   .horizontal-cards-container {
+ 
+.horizontal-cards-container {
     display: flex;
-    flex-direction: row;       /* Las alinea en fila horizontal */
-    justify-content: center;   /* Centra ambas tarjetas en la pantalla */
-    gap: 30px;                 /* Separa una tarjeta de la otra */
-    flex-wrap: nowrap;         /* Evita que se bajen bajo ninguna circunstancia en PC */
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
     width: 100%;
     margin-top: 30px;
 }
-
+ 
 .custom-menu-card {
     position: relative;
     background-color: var(--negro-absoluto);
-    border-radius: 20px;       /* Bordes redondeados de tus capturas */
+    border-radius: 20px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    width: 48%;                /* Ocupan casi la mitad cada una para ir al lado */
-    max-width: 550px;    
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);     /* Evita que se vuelvan gigantes en pantallas enormes */
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    width: 48%;
+    max-width: 550px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.35s, box-shadow 0.35s;
 }
+ 
+.custom-menu-card:hover {
+    border-color: rgba(255, 198, 0, 0.3);
+    box-shadow: 0 14px 40px rgba(255,198,0,0.10);
+}
+ 
 .card-img-wrap {
     height: 380px;
     overflow: hidden;
 }
-
+ 
 .custom-menu-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0.65;
-    transition: transform 0.5s;
+    transition: transform 0.5s, opacity 0.4s;
 }
-
+ 
 .custom-menu-card:hover img {
     transform: scale(1.04);
+    opacity: 0.75;
 }
-
-/* El botón amarillo posicionado abajo en el centro de la tarjeta */
+ 
+/* Badge de precio */
+.card-label-badge {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background-color: rgba(0,0,0,0.75);
+    border: 1px solid rgba(255,198,0,0.5);
+    color: var(--dorado-branding);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+}
+ 
 .card-btn {
     position: absolute;
     bottom: 25px;
@@ -242,37 +455,28 @@ h1, h2, h3, h4 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.6);
     transition: all 0.3s;
 }
-
+ 
 .card-btn:hover {
     background-color: var(--dorado-hover);
     color: var(--negro-absoluto);
 }
+ 
 
-/* ==========================================================================
-   SECCIONES ADICIONALES: CTA & FOOTER PREMIUM (ESTRUCTURA REAL)
-   ========================================================================== */
-
-/* --- Sección CTA --- */
 .cta-banner {
-    background: linear-gradient(rgba(217, 173, 38, 0.04), rgba(0, 0, 0, 0.95));
+    background-color: #000000;
+    background-image: linear-gradient(rgba(255, 198, 0, 0.06), rgba(0, 0, 0, 0.0));
     border-top: 1px solid rgba(255, 198, 0, 0.12);
-    padding: 60px 20px;
+    padding: 80px 20px;
     width: 100%;
 }
-
+ 
 .cta-container {
     max-width: 650px;
     margin: 0 auto;
     text-align: center;
 }
 
-.cta-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #a0a0a0;
-}
-
-/* El botón de registro con su separación ideal y esquinas moderadas de 6px */
+ 
 .btn-registrar {
     display: inline-block;
     background-color: var(--dorado-branding);
@@ -285,31 +489,38 @@ h1, h2, h3, h4 {
     padding: 14px 40px;
     border-radius: 6px;
     text-decoration: none;
-    margin-top: 35px; /* Aquí controlamos la separación perfecta del texto */
+    margin-top: 35px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
-
+ 
 .btn-registrar:hover {
     background-color: var(--dorado-hover);
     color: var(--negro-absoluto);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 198, 0, 0.25);
 }
-
-/* --- Footer Premium --- */
+ 
+.modal-custom {
+    border-radius: 15px;
+    overflow: hidden;
+}
+ 
+/* ══════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════ */
 .footer-premium {
     background-color: #000000;
+    border-top: 1px solid rgba(255,255,255,0.06);
     padding: 40px 20px 30px 20px;
     width: 100%;
 }
-
+ 
 .footer-container {
     max-width: 1100px;
     margin: 0 auto;
 }
-
-/* Rejilla de horarios: se divide en 3 columnas perfectas en PC */
+ 
 .horarios-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -317,14 +528,14 @@ h1, h2, h3, h4 {
     text-align: center;
     margin-bottom: 35px;
 }
-
+ 
 .horario-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 10px;
 }
-
+ 
 .dia-titulo {
     color: var(--dorado-branding);
     font-weight: 700;
@@ -333,36 +544,62 @@ h1, h2, h3, h4 {
     letter-spacing: 1px;
     margin-bottom: 6px;
 }
-
+ 
 .hora-texto {
     color: #cccccc;
     font-size: 0.95rem;
 }
-
-/* Estilo apagado elegante para el día cerrado */
-.horario-card.cerrado .dia-titulo {
-    color: #555555;
-}
-.horario-card.cerrado .hora-texto {
-    color: #444444;
-}
-
-/* Línea divisoria horizontal implacable de lado a lado */
+ 
+.horario-card.cerrado .dia-titulo { color: #555555; }
+.horario-card.cerrado .hora-texto { color: #444444; }
+ 
 .footer-divider {
     height: 1px;
     background-color: rgba(255, 255, 255, 0.08);
     width: 100%;
     margin-bottom: 25px;
 }
-
+ 
 .copyright-wrap {
     text-align: center;
 }
-
-/* --- Soporte de Adaptabilidad para Celulares --- */
-@media (max-width: 768px) {
+ 
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+@media (max-width: 1199px) {
+    .barber-card {
+        flex: 0 0 calc((100% - 24px) / 2);   /* 2 visibles en tablet */
+    }
+}
+ 
+@media (max-width: 767px) {
+    .hero-title { font-size: 3.5rem; }
+    .hero-title-barberia { font-size: 2.2rem; letter-spacing: 4px; }
+ 
+    .barber-card {
+        flex: 0 0 100%;                        /* 1 visible en móvil */
+    }
+ 
+    .barbers-carousel-wrapper {
+        padding: 0 54px;
+    }
+ 
+    .horizontal-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .custom-menu-card {
+        width: 90%;
+        max-width: 100%;
+    }
+ 
     .horarios-grid {
-        grid-template-columns: 1fr; /* Se vuelven una sola columna ordenada si se ve en celular */
-        gap: 15px;
+        grid-template-columns: 1fr;
+    }
+ 
+    .hero-buttons {
+        flex-direction: column;
     }
 }
