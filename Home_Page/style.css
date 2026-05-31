@@ -1,0 +1,605 @@
+/* ══════════════════════════════════════════════
+   VARIABLES GLOBALES
+══════════════════════════════════════════════ */
+:root {
+    --dorado-branding: #FFC600;
+    --dorado-hover: #FFD43E;
+    --gris-borde: #30302E;
+    --negro-absoluto: #000000;
+    --texto-blanco: #FFFFFF;
+ 
+    --fuente-titulos: 'Times New Roman', Times, serif;
+    --fuente-cuerpo: 'Segoe UI', Roboto, sans-serif;
+}
+ 
+/* ══════════════════════════════════════════════
+   BASE
+══════════════════════════════════════════════ */
+body {
+    background-color: var(--negro-absoluto);
+    color: var(--texto-blanco);
+    font-family: var(--fuente-cuerpo);
+    overflow-x: hidden;
+}
+ 
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    letter-spacing: 1px;
+}
+ 
+.text-gold {
+    color: var(--dorado-branding);
+}
+ 
+.section-padding {
+    padding: 80px 0;
+}
+ 
+.sub-bar {
+    width: 50px;
+    height: 3px;
+    background-color: var(--dorado-branding);
+    margin: 15px auto 0 auto;
+}
+ 
+/* Eyebrow label encima de títulos de sección */
+.section-eyebrow {
+    color: var(--dorado-branding);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+ 
+.title-options {
+    font-family: var(--fuente-titulos) !important;
+}
+ 
+/* ══════════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════════ */
+.custom-navbar {
+    background-color: var(--negro-absoluto);
+    border-bottom: 1px solid var(--gris-borde);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+ 
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+ 
+.brand-logo {
+    color: var(--dorado-branding);
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-family: var(--fuente-titulos);
+    text-decoration: none;
+}
+ 
+.auth-buttons-group {
+    display: flex;
+    gap: 15px;
+}
+ 
+/* ══════════════════════════════════════════════
+   BOTONES REUTILIZABLES
+══════════════════════════════════════════════ */
+.btn-custom-outline {
+    color: var(--texto-blanco);
+    border: 1px solid var(--dorado-branding);
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 8px 22px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+ 
+.btn-custom-outline:hover {
+    background-color: var(--dorado-branding);
+    color: var(--negro-absoluto);
+}
+ 
+.btn-custom-solid {
+    background-color: var(--dorado-branding);
+    color: var(--negro-absoluto);
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 8px 22px;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    display: inline-block;
+    cursor: pointer;
+}
+ 
+.btn-custom-solid:hover {
+    background-color: var(--dorado-hover);
+}
+ 
+.btn-sm-custom {
+    padding: 6px 18px;
+}
+ 
+/* ══════════════════════════════════════════════
+   HERO SECTION (CORREGIDO Y ESPACIADO)
+══════════════════════════════════════════════ */
+.hero-section {
+    position: relative;
+    min-height: 95vh; /* Aumentado de 80vh a 95vh para que la pantalla respire y no se vea amontonada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    z-index: 1;
+    filter: brightness(0.7) contrast(1.1);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.60) 50%,
+        rgba(0, 0, 0, 0.80) 100%
+    );
+    z-index: 2;
+}
+
+/* Contenedor del contenido del hero */
+.hero-content-wrapper {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 6.5rem; /* Agrandado a 6.5rem para un impacto visual imponente */
+    font-weight: bold;
+    line-height: 0.85; /* CORREGIDO: Evita que "M&A" se monte encima de "Barbería" */
+    text-align: center;
+    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.9);
+    margin-top: -15px;
+}
+.hero-title-barberia {
+    display: block;
+    color: #ffffff;
+    font-size: 4.2rem; 
+    letter-spacing: 8px; 
+    text-transform: uppercase;
+    text-shadow: 0 0 40px rgba(255,198,0,0.3), 0 2px 15px rgba(0,0,0,0.9);
+    margin-bottom: -10px; /* <-- MARGEN NEGATIVO: Obliga a "M&A" a pegarse hacia arriba */
+}
+
+.text-description {
+    font-size: 1.3rem; /* Aumentado ligeramente para máxima legibilidad */
+    font-weight: 500;
+    max-width: 650px; /* Un poco más amplio para albergar el texto cómodamente */
+    margin: 3.5rem auto 4rem auto; /* DISTRIBUCIÓN: 3.5rem de espacio arriba (título) y 4rem abajo (botones) */
+    text-align: center;
+    line-height: 1.7;
+    color: #FFFFFF;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 1);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px; /* Más espacio entre el botón de reserva y el de ver opciones */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+ 
+.barbers-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 70px;
+    box-sizing: border-box;
+}
+ 
+.barbers-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+ 
+.barbers-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+ 
+/* ── Tarjeta individual de barbero ── */
+.barber-card {
+    flex: 0 0 calc((100% - 48px) / 3);   /* 3 visibles en desktop */
+    background-color: #0a0a0a;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 198, 0, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+ 
+.barber-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 198, 0, 0.45);
+    box-shadow: 0 16px 40px rgba(255, 198, 0, 0.12);
+}
+ 
+.barber-img-wrap {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+}
+ 
+.barber-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: grayscale(20%);
+}
+ 
+.barber-card:hover .barber-img-wrap img {
+    transform: scale(1.06);
+    filter: grayscale(0%);
+}
+ 
+.barber-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+    z-index: 1;
+}
+ 
+.barber-info {
+    padding: 20px 22px 24px;
+    text-align: center;
+}
+ 
+.barber-name {
+    font-family: var(--fuente-titulos);
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+ 
+.barber-specialty {
+    display: block;
+    font-size: 0.80rem;
+    color: var(--dorado-branding);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+ 
+.barber-stars {
+    color: var(--dorado-branding);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+ 
+/* ── Flechas de navegación ── */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: var(--dorado-branding);
+    color: var(--negro-absoluto);
+    border: none;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s, transform 0.25s;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+ 
+.carousel-arrow:hover {
+    background-color: var(--dorado-hover);
+    transform: translateY(-50%) scale(1.08);
+}
+ 
+.carousel-arrow-prev { left: 14px; }
+.carousel-arrow-next { right: 14px; }
+ 
+/* ── Dots ── */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 32px;
+    padding-bottom: 8px;
+}
+ 
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,198,0,0.5);
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 0;
+}
+ 
+.carousel-dot.active {
+    background-color: var(--dorado-branding);
+    transform: scale(1.25);
+    border-color: var(--dorado-branding);
+}
+ 
+#opciones .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+ 
+.horizontal-cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-top: 30px;
+}
+ 
+.custom-menu-card {
+    position: relative;
+    background-color: var(--negro-absoluto);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    width: 48%;
+    max-width: 550px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.35s, box-shadow 0.35s;
+}
+ 
+.custom-menu-card:hover {
+    border-color: rgba(255, 198, 0, 0.3);
+    box-shadow: 0 14px 40px rgba(255,198,0,0.10);
+}
+ 
+.card-img-wrap {
+    height: 380px;
+    overflow: hidden;
+}
+ 
+.custom-menu-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.65;
+    transition: transform 0.5s, opacity 0.4s;
+}
+ 
+.custom-menu-card:hover img {
+    transform: scale(1.04);
+    opacity: 0.75;
+}
+ 
+/* Badge de precio */
+.card-label-badge {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background-color: rgba(0,0,0,0.75);
+    border: 1px solid rgba(255,198,0,0.5);
+    color: var(--dorado-branding);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+}
+ 
+.card-btn {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dorado-branding);
+    color: var(--negro-absoluto);
+    font-family: var(--fuente-cuerpo);
+    font-weight: bold;
+    padding: 12px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    transition: all 0.3s;
+}
+ 
+.card-btn:hover {
+    background-color: var(--dorado-hover);
+    color: var(--negro-absoluto);
+}
+ 
+
+.cta-banner {
+    background-color: #000000;
+    background-image: linear-gradient(rgba(255, 198, 0, 0.06), rgba(0, 0, 0, 0.0));
+    border-top: 1px solid rgba(255, 198, 0, 0.12);
+    padding: 80px 20px;
+    width: 100%;
+}
+ 
+.cta-container {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+ 
+.btn-registrar {
+    display: inline-block;
+    background-color: var(--dorado-branding);
+    color: var(--negro-absoluto);
+    font-family: var(--fuente-cuerpo);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    padding: 14px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+ 
+.btn-registrar:hover {
+    background-color: var(--dorado-hover);
+    color: var(--negro-absoluto);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 198, 0, 0.25);
+}
+ 
+.modal-custom {
+    border-radius: 15px;
+    overflow: hidden;
+}
+ 
+/* ══════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════ */
+.footer-premium {
+    background-color: #000000;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 40px 20px 30px 20px;
+    width: 100%;
+}
+ 
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+ 
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+ 
+.horario-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+ 
+.dia-titulo {
+    color: var(--dorado-branding);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+ 
+.hora-texto {
+    color: #cccccc;
+    font-size: 0.95rem;
+}
+ 
+.horario-card.cerrado .dia-titulo { color: #555555; }
+.horario-card.cerrado .hora-texto { color: #444444; }
+ 
+.footer-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.08);
+    width: 100%;
+    margin-bottom: 25px;
+}
+ 
+.copyright-wrap {
+    text-align: center;
+}
+ 
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+@media (max-width: 1199px) {
+    .barber-card {
+        flex: 0 0 calc((100% - 24px) / 2);   /* 2 visibles en tablet */
+    }
+}
+ 
+@media (max-width: 767px) {
+    .hero-title { font-size: 3.5rem; }
+    .hero-title-barberia { font-size: 2.2rem; letter-spacing: 4px; }
+ 
+    .barber-card {
+        flex: 0 0 100%;                        /* 1 visible en móvil */
+    }
+ 
+    .barbers-carousel-wrapper {
+        padding: 0 54px;
+    }
+ 
+    .horizontal-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .custom-menu-card {
+        width: 90%;
+        max-width: 100%;
+    }
+ 
+    .horarios-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
